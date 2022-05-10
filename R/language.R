@@ -2,6 +2,7 @@ pkgEnv <- new.env()
 
 pkgEnv$label_en = list(
   "Please authenticate" = "Please authenticate",
+  "dsuser" = "DataSHIELD user",
   "Username:" = "Username :",
   "Password:" = "Password :",
   "Login" = "Login",

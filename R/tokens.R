@@ -55,6 +55,9 @@
     is_admin = function(token) {
       isTRUE(as.logical(private$tokens_user[[token]]$admin))
     },
+    is_dsuser = function(token) {
+      isTRUE(as.logical(private$tokens_user[[token]]$dsuser))
+    },
     get = function(token) {
       info <- private$tokens_user[[token]]
       if("shinymanager_datetime" %in% names(info)) info$shinymanager_datetime <- NULL

@@ -57,6 +57,12 @@ edit_user_ui <- function(id, credentials, username = NULL, inputs_list = NULL, l
             value = isTRUE(all(as.logical(data_user[[x]])))
           )
         }
+      } else if (identical(x, "dsuser")) {
+        checkboxInput(
+          inputId = ns(x),
+          label = R.utils::capitalize(lan$get("dsuser")),
+          value = isTRUE(all(as.logical(data_user[[x]])))
+        )
       } else {
         if (!is.null(inputs_list) && x %in% names(inputs_list) &&
            all(c("fun", "args") %in% names(inputs_list[[x]])) && exists(inputs_list[[x]]$fun)) {
