@@ -112,11 +112,13 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
               textInput(
                 inputId = ns("user_id"),
                 label = lan$get("Username:"),
+                value = "guest",
                 width = "100%"
               ),
               passwordInput(
                 inputId = ns("user_pwd"),
                 label = lan$get("Password:"),
+                value = "guest",
                 width = "100%"
               ),
               tags$br(),
